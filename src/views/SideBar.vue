@@ -28,37 +28,37 @@
   export default {
     data() {
       return {
-        activeIndex: "1-1",
+        activeIndex: "digest",
         isCollapse: false,
         menu: [
           {
-            index: "1",
+            index: "internal medicine",
             label: "内科",
             children: [
-              { index: "1-1", label: "消化内科" },
-              { index: "1-2", label: "神经内科" },
-              { index: "1-3", label: "呼吸内科" },
-              { index: "1-4", label: "心血管内科" },
+              { index: "digest", label: "消化内科" },
+              { index: "neurology", label: "神经内科" },
+              { index: "respiratory", label: "呼吸内科" },
+              { index: "cardio", label: "心血管内科" },
             ],
           },
           {
-            index: "2",
+            index: "surgery",
             label: "外科",
             children: [
-              { index: "2-1", label: "普通外科" },
-              { index: "2-2", label: "神经外科" },
-              { index: "2-3", label: "骨科" },
-              { index: "2-4", label: "泌尿外科" },
+              { index: "general", label: "普外科" },
+              { index: "neurosurgery", label: "神经外科" },
+              { index: "orthopedics", label: "骨科" },
+              { index: "urology", label: "泌尿外科" },
             ],
           },
           {
-            index: "3",
+            index: "pediatrics",
             label: "儿科",
             children: [
-              { index: "3-1", label: "小儿内科" },
-              { index: "3-2", label: "小儿外科" },
-              { index: "3-3", label: "小儿神经科" },
-              { index: "3-4", label: "小儿心脏科" },
+              { index: "pediatric-internal", label: "小儿内科" },
+              { index: "pediatric-surgery", label: "小儿外科" },
+              { index: "pediatric-neuro", label: "小儿神经科" },
+              { index: "pediatric-cardio", label: "小儿心脏科" },
             ],
           },
         ],
@@ -67,7 +67,7 @@
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
-        this.$router.push({ name: key });
+        this.$router.push({ path: '/appointments/' + key});
       },
     },
   };
