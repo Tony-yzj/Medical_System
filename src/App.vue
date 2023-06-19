@@ -13,6 +13,7 @@ import Home from './views/Home.vue'
 import User from './views/UserCenter.vue'
 import Doctor from './views/Doctor.vue'
 import Appointment from './views/Appointment.vue'
+import Records from './views/Records.vue'
 
 export default {
   name: 'App',
@@ -23,6 +24,7 @@ export default {
     Home,
     Doctor,
     Appointment,
+    Records,
   }
 }
 </script>

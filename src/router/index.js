@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 import User from '../views/UserCenter.vue'
 import Doctor from '../views/Doctor.vue'
 import Appointment from '../views/Appointment.vue'
+import Records from "../views/Records.vue"
 import Digest from '../views/Department/Digest.vue'
 import Neurology from '../views/Department/Neurology.vue'
 import Respiratory from '../views/Department/Respiratory.vue'
@@ -25,6 +26,7 @@ const routes = [
   { path: '/user', component: User },
   { path: '/login', component: Login },
   { path: '/doctors', component: Doctor },
+  { path:'/records', component: Records},
   {
     path: '/appointments',
     component: Appointment,
