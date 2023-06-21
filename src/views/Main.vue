@@ -10,7 +10,7 @@
         </el-col>
         <el-col :span="16">
           <!-- 菜单 -->
-          <el-menu
+          <el-menu :default-active="activeMenu" @select="handleMenuSelect"
             mode="horizontal"
             router
             background-color="#545c64"
@@ -22,7 +22,7 @@
             <el-menu-item index="/appointments">预约挂号</el-menu-item>
             <el-menu-item index="/records">查看预约信息</el-menu-item>
             <el-menu-item index="/online">在线问诊</el-menu-item>
-            <el-menu-item index="/knowledge">健康知识</el-menu-item>
+            <el-menu-item index="/knowledge">术后康复</el-menu-item>
           </el-menu>
         </el-col>
         <el-col :span="4">
@@ -75,6 +75,15 @@ export default {
       this.editProfile();
       }
     },
+    handleMenuSelect(index) {
+      if (index === '/online') {
+        window.open('https://www.baidu.com', '_blank');
+      }
+      if (index === '/knowledge') {
+        window.open('https://www.baidu.com', '_blank');
+      }
+
+    }
   },
 };
 </script>

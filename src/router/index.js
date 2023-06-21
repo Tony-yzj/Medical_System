@@ -27,6 +27,7 @@ const routes = [
   { path: '/login', component: Login },
   { path: '/doctors', component: Doctor },
   { path:'/records', component: Records},
+
   {
     path: '/appointments',
     component: Appointment,
