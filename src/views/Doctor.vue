@@ -50,7 +50,7 @@
     </el-popover>
     </div>
     <!-- 预约按钮 -->
-    <el-button type="primary" @click="handleBooking(doctor)">预约挂号</el-button>
+    <el-button type="primary" @click="handleBooking(doctor)">咨询请求</el-button>
     </div>
     </el-collapse-item>
     </el-collapse>
@@ -104,7 +104,7 @@
          description: item.company.catchPhrase,
          total: Math.floor(Math.random() * 10) + 10,
          booked: Math.floor(Math.random() * 10),
-         rating: Math.floor(Math.random() * 5) + 1,
+         rating: Math.floor(Math.random() * 3) + 3,
          comments: [
           "非常专业，态度很好",
           "解答了我的疑问，很有耐心",
@@ -129,7 +129,7 @@
      },
      // 处理预约事件
      handleBooking(doctor) {
-      this.$message.success(`您已成功预约${doctor.name}医生`); // 弹出成功提示
+      this.$message.success(`您已成功预约${doctor.name}医生咨询，详情请见信息`); // 弹出成功提示
      },
      // 根据科室的名称返回对应的专长
      getExpertise(department) {
