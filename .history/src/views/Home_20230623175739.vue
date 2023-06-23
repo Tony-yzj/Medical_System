@@ -2,9 +2,9 @@
 <template>
   <div class="home">
   <!-- 登录按钮 -->
-  <!-- <div class="login">
-  <el-button type="primary" size="small" @click="goTo('/login')">登录</el-button> -->
-  <!-- </div> -->
+  <div class="login">
+  <el-button type="primary" size="small" @click="goTo('/login')">登录</el-button>
+  </div>
   <!-- 轮播图 -->
   <el-carousel height="400px" autoplayTimeout="3000" indicator-position="outside" navigation-enabled="true" arrow-key-nav="true">
   <el-carousel-item v-for="item in images" :key="item.id">
@@ -90,7 +90,7 @@
   },
   {
   id: 4,
-  name: "康复系统",
+  name: "术后康复",
   icon: require("../assets/icon/知识.svg"),
   path: "/knowledge",
   },

@@ -84,7 +84,7 @@ export default {
       }
       // if (index === '/user') {
       //   window.open('http://192.168.43.109:8080/home', '_blank');
-      // }
+      }
 
     }
   },

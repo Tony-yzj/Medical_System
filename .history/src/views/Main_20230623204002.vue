@@ -82,9 +82,9 @@ export default {
       if (index === '/knowledge') {
         window.open('http://192.168.43.109:8080/home', '_blank');
       }
-      // if (index === '/user') {
-      //   window.open('http://192.168.43.109:8080/home', '_blank');
-      // }
+      if (index === '/user') {
+        window.open('http://192.168.43.62:8080/', '_blank');
+      }
 
     }
   },

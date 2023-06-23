@@ -22,7 +22,7 @@
             <el-menu-item index="/appointments">预约挂号</el-menu-item>
             <el-menu-item index="/records">查看预约信息</el-menu-item>
             <el-menu-item index="/online">在线问诊</el-menu-item>
-            <el-menu-item index="/knowledge">康复系统</el-menu-item>
+            <el-menu-item index="/knowledge">术后康复</el-menu-item>
           </el-menu>
         </el-col>
         <el-col :span="4">
@@ -82,9 +82,6 @@ export default {
       if (index === '/knowledge') {
         window.open('http://192.168.43.109:8080/home', '_blank');
       }
-      // if (index === '/user') {
-      //   window.open('http://192.168.43.109:8080/home', '_blank');
-      // }
 
     }
   },
