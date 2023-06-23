@@ -22,7 +22,7 @@
     <!-- 职称 -->
     <el-tag type="success">{{ doctor.title }}</el-tag>
     <!-- 擅长 -->
-    <span class="expertise">{{ getExpertise(doctor.department) }}</span>
+    <span class="expertise">{{ getExpertise(doctor.department, doctor.id) }}</span>
     </template>
     <!-- 面板内容 -->
     <div class="content">
@@ -129,11 +129,16 @@
      },
      // 处理预约事件
      handleBooking(doctor) {
-      this.$message.success(`您已成功预约${doctor.name}医生咨询，详情请见信息`); // 弹出成功提示
+      if(doctor.booked == doctor.total)
+        this.$message.error(`${doctor.name}医生的咨询名额已满，暂不可预约`);
+      else{
+        doctor.booked = doctor.booked + 1;
+        this.$message.success(`您已成功预约${doctor.name}医生咨询，详情请见信息`); // 弹出成功提示
+      }
      },
      // 根据科室的名称返回对应的专长
-     getExpertise(department) {
-      return this.expertiseByDepartment[department][Math.floor(Math.random() * 4)] || [];
+     getExpertise(department, id) {
+      return this.expertiseByDepartment[department][id%4] || [];
      }
     },
     created() {
